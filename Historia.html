@@ -8,6 +8,20 @@
 	</head>
 
 	<body>
+	<?php
+
+if (isset($_SESSION['username'])) {
+   echo ("<div class='log_div'> Bienvenido " . $_SESSION['username'] . "</div></br>");
+   echo ("<div class='logout'><a href='logout.php'> Cerrar sesion</a></div>");
+}else if(isset ($_SESSION)){
+    session_destroy();
+   echo ("<div class='log_div'> Bienvenido invitado </div></br>");
+   echo ("<div class='logout'><a href='createuser.php'> Crear usuario</a></div>");
+   echo ("<div class='logout'><a href='login.php'> Iniciar sesion</a></div>");
+
+}
+
+?>
   <ul class="nav">
 	  <li><a href=index.html>Inicio</a></li>
 	  <li><a href=quienes.html>Sobre Nosotros</a>
