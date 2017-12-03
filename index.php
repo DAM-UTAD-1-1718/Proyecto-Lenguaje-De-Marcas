@@ -11,8 +11,8 @@
 	<?php
 
 if (isset($_SESSION['username'])) {
-   echo ("<div class='log_div'> Bienvenido " . $_SESSION['username'] . "</div></br>");
-   echo ("<div class='logout'><a href='logout.php'> Cerrar sesion</a></div>");
+   echo ("<div class='log_div'> Bienvenido " . $_SESSION['username'] . "</br>");
+   echo ("<a href='logout.php'> Cerrar sesion</a></div>");
 }else if(isset ($_SESSION)){
     session_destroy();
    echo ("<div class='log_div'> Bienvenido invitado </div></br>");
